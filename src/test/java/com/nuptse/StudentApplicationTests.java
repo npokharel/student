@@ -1,4 +1,4 @@
-package com.nuptse.student;
+package com.nuptse;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

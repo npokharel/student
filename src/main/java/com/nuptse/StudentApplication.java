@@ -1,4 +1,4 @@
-package com.nuptse.student;
+package com.nuptse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -11,9 +11,11 @@
     <!--<link rel="stylesheet" href="assets/fonts/feather/feather.min.css">-->
     <link rel="stylesheet" href="http://dashkit.goodthemes.co/assets/fonts/feather/feather.min.css">
     <link rel="stylesheet" href="assets/libs/highlight/styles/vs2015.min.css">
-    <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">
+    <!--<link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">-->
 
+    <link rel="stylesheet" type="text/css" th:href="@{/css/flatpickr.css}" />
     <!-- Theme CSS -->
+
     <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}" />
 
     <title>Student MS</title>
@@ -61,9 +63,20 @@
                     <div class="collapse" id="sidebarPages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
+                                <form th:action="@{/create}">
+                                <a th:href="@{/create}" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
                                     New
+                                    <input type="submit" >
                                 </a>
+                                </form>
+
+                                <!--<form th:action="@{/create}" method="get">
+                                    <small class="text-muted text-center">
+                                        <button type="submit">
+                                        <a class="nav-link" type="Submit">Register New Student</a>
+                                        </button>
+                                    </small>
+                                </form>-->
                             </li>
                             <li class="nav-item">
                                 <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
@@ -92,19 +105,20 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#!" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="fe fe-layout"></i> Courses
+                <li class="nav-item">
+                    <a class="nav-link" href="#sidebarPages1" data-toggle="collapse"
+                       role="button" aria-expanded="true" aria-controls="sidebarPages">
+                        <i class="fe fe-file"></i> Courses
                     </a>
-                    <div class="collapse " id="sidebarLayouts">
+                    <div class="collapse" id="sidebarPages1">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#!" class="nav-link">
+                                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
                                     New
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#!" class="nav-link ">
+                                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
                                     List
                                 </a>
                             </li>
@@ -385,8 +399,9 @@
 <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
 <script src="assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 <script src="assets/libs/list.js/dist/list.min.js"></script>-->
-
+<script src="js/flatpickr.min.js"></script>
 <!-- Theme JS -->
+
 <script src="js/theme.min.js"></script>
 
 </body>

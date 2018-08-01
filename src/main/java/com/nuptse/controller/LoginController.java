@@ -53,11 +53,9 @@ public class LoginController {
             modelAndView.addObject("successMessage", "User has been registered successfully");
             modelAndView.addObject("user", new User());
             modelAndView.setViewName("registration");
-
         }
         return modelAndView;
     }
-
     @RequestMapping(value="/admin", method = RequestMethod.GET)
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView();

@@ -7,12 +7,16 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.nuptse.model.User;
 import com.nuptse.service.UserService;
+
+import java.util.List;
 
 @Controller
 public class LoginController {
@@ -21,8 +25,14 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping(value={"/", "/login"}, method = RequestMethod.GET)
+
     public ModelAndView login(){
+        List<User> userList = userService.findAll();
+        userList.forEach(user -> System.out.println("user email: " + user.getEmail()));
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("userList", userList);
+        User user = userService.findUserById(1);
+        System.out.println("user = " + user);
         modelAndView.setViewName("login");
         return modelAndView;
     }
@@ -65,6 +75,17 @@ public class LoginController {
         modelAndView.addObject("adminMessage","Content Available Only for Users with Admin Role");
         modelAndView.setViewName("/admin/home");
         return modelAndView;
+    }
+
+    @RequestMapping(value="/show")
+    public void resetPassword(
+            @RequestParam(value="id",required=false)  Integer id)
+    {
+
+        User user = userService.findUserById(id);
+       // User user = userService.findUserById(id);
+        System.out.println("user = " + user);
+
     }
 
 

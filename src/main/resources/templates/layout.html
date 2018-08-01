@@ -57,18 +57,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarPages">
-                        <i class="fe fe-file"></i> Student
+                    <a class="nav-link" href="#sidebarStudent" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+                        <i class="fe fe-user"></i> Student
                     </a>
-                    <div class="collapse" id="sidebarPages">
+                    <div class="collapse" id="sidebarStudent">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a th:href="@{/teacher/create}"  class="nav-link"  role="button"  >
+                                <a th:href="@{/student/create}"  class="nav-link"  role="button"  >
                                     New
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
+                                <a th:href="@{/student/list}" class="nav-link"  role="button" >
                                     List
                                 </a>
                             </li>
@@ -91,52 +91,50 @@
                                     List
                                 </a>
                             </li>
-                            <!--  <li class="nav-item">
-                                <a th:href="@{/teacher/show}" class="nav-link"  role="button" >
-                                    Show
-                                </a> -->
-                            </li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#!" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="fe fe-layout"></i> Courses
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sidebarCourse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+                        <i class="fe fe-user"></i> Courses
                     </a>
-                    <div class="collapse" id="sidebarPages1">
+                    <div class="collapse" id="sidebarCourse">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
+                                <a th:href="@{/course/create}"  class="nav-link"  role="button"  >
                                     New
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
-                                    List
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>-->
-                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarPages">
-                        <i class="fe fe-file"></i> Courses
-                    </a>
-                    <div class="collapse" id="sidebarPages">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
-                                    New
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
+                                <a th:href="@{/course/list}" class="nav-link"  role="button" >
                                     List
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sidebarExams" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+                        <i class="fe fe-user"></i> Exams
+                    </a>
+                    <div class="collapse" id="sidebarExams">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a th:href="@{/exam/create}"  class="nav-link"  role="button"  >
+                                    New
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a th:href="@{/exam/list}" class="nav-link"  role="button" >
+                                    List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
 
             <!-- Divider -->

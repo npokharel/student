@@ -24,8 +24,22 @@
 
 								<!-- Title -->
 								<h1 class="header-title">courses</h1>
+								
+								  <!--  <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">  -->
+ 								  			
+ 								  			<form class="mb-4" action="#" th:action="@{/course/show}"
+										method="get">
+										<input type="search" name="id"class="form-control form-control-rounded form-control-prepended"placeholder="Search"aria-label="Search"
+											>
+										<button type="submit" class="btn btn-primary btn-block">search</button>
 
+									</form>		
+ 								  	
+
+                        </div>
+ 								 
 							</div>
+							
 						</div>
 						<!-- / .row -->
 						<div class="row align-items-center">
@@ -65,15 +79,22 @@
 										method="get">
 										<input type="hidden" name="id"
 											th:value="${courses.getCourseId()}">
-										<button type="submit" class="btn btn-primary">show</button>
+										<button type="submit" class="btn btn-primary btn-block">show</button>
 
 									</form>
-								
+									
+		<!-- 						<form class="mb-4" action="#" th:action="@{/course/show}"
+										method="get">
+										<input type="search" name="id"class="form-control form-control-rounded form-control-prepended"
+											th:value="${courses.getCourseId()}">
+										<button type="submit" class="btn btn-primary">search</button>
+
+									</form> -->
 								<form class="mb-4" action="#" th:action="@{/course/edit}"
 										method="get">
 										<input type="hidden" name="id"
 											th:value="${courses.getCourseId()}">
-										<button type="submit" class="btn btn-primary">edit</button>
+										<button type="submit" class="btn btn-md btn-warning btn-block">edit</button>
 										</form>
 								</td>
 							</tr>

@@ -24,7 +24,14 @@
 
 								<!-- Title -->
 								<h1 class="header-title">Exam</h1>
+											<form class="mb-4" action="#" th:action="@{/exam/show}"
+										method="get">
+										<input type="search" name="id"class="form-control form-control-rounded form-control-prepended"placeholder="Search"aria-label="Search"
+											>
+										<button type="submit" class="btn btn-primary btn-block">search</button>
 
+									</form>		
+ 								  		
 							</div>
 						</div>
 						<!-- / .row -->
@@ -68,7 +75,7 @@
 									</form>
 									<form class="mb-4" action="#" th:action="@{/exam/edit}" method="post">
 								 <input type="hidden" name="id" th:value="${exam.getId()}">
-									<button type="submit" class="btn btn-primary">edit</button>
+									<button type="submit" class="btn btn-md btn-warning">edit</button>
 								
 									</form>
 								</td>
